@@ -8,6 +8,7 @@ class Artist
 
   extend Memorable::ClassMethods
   extend Findable::ClassMethods
+  include Paramble::InstanceMethods
 
   def self.find_by_name(name)
     @@artists.detect{|a| a.name == name}
@@ -30,9 +31,4 @@ class Artist
   def add_songs(songs)
     songs.each { |song| add_song(song) }
   end
-
-  #def to_param
-  #  name.downcase.gsub(' ', '-')
-  #end
-
 end
