@@ -7,6 +7,7 @@ class Song
   @@songs = []
 
   extend Memorable::ClassMethods
+  include Memorable::InstanceMethods
   extend Findable::ClassMethods
   include Paramble::InstanceMethods
 
@@ -21,10 +22,6 @@ class Song
   def artist=(artist)
     @artist = artist
   end
-
-  #def to_param
-  #  name.downcase.gsub(' ', '-')
-  #end
 
   def self.all
     @@songs
