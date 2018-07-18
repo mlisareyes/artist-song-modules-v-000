@@ -6,9 +6,9 @@ class Song
 
   @@songs = []
 
+  extend Findable::ClassMethods
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
-  extend Findable::ClassMethods
   include Paramble::InstanceMethods
 
   def initialize
