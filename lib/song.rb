@@ -9,7 +9,7 @@ class Song
   extend Findable::ClassMethods
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
-  include Paramble::InstanceMethods
+  include Paramable::InstanceMethods
 
   def artist=(artist)
     @artist = artist
