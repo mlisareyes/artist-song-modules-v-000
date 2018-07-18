@@ -11,12 +11,8 @@ class Artist
   extend Findable::ClassMethods
   include Paramble::InstanceMethods
 
-  def self.find_by_name(name)
-    @@artists.detect{|a| a.name == name}
-  end
-
   def initialize
-    @@artists << self
+    super
     @songs = []
   end
 
